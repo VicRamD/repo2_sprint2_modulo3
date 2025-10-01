@@ -23,11 +23,20 @@ const superheroSchema = new mongoose.Schema({
 const SuperHero = mongoose.model('SuperHero', superheroSchema);
 //El modelo permite realizar operaciones sobre los datos
 
-/*const insertSuperHero = ()=>{
+const insertSuperHero = async ()=>{
     const hero = new SuperHero({
         nombreSuperHeroe: 'Spiderman',
         nombreReal: 'Peter Parker',
         edad: 25,
-        planetaOrigen
-    })
-} */
+        planetaOrigen: 'Tierra',
+        debilidad: 'Radioactiva',
+        poderes: ['Trepar paredes', 'Sentido arácnido', 'Super fuerza', 'Agilidad'],
+        aliados: ['Ironman'],
+        enemigos: ['Duende Verde'],
+        creador: 'Martin'
+    });
+    await hero.save();
+    console.log('Superhéroe insertado: ', hero);
+} 
+
+insertSuperHero();
