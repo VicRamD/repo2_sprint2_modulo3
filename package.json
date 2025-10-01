@@ -1,0 +1,22 @@
+{
+  "name": "sp2mod3tp2",
+  "version": "1.0.0",
+  "description": "Trabajo Practico 2 del sprint 2 del modulo 3",
+  "main": "app.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VicRamD/repo2_sprint2_modulo3.git"
+  },
+  "author": "Victor Francisco Ramirez Diaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VicRamD/repo2_sprint2_modulo3/issues"
+  },
+  "homepage": "https://github.com/VicRamD/repo2_sprint2_modulo3#readme",
+  "dependencies": {
+    "mongoose": "^8.18.3"
+  }
+}
