@@ -10,7 +10,7 @@ const superheroSchema = new mongoose.Schema({
     nombreSuperHeroe: {type: String, required: true},
     nombreReal: {type: String, required: true},
     edad: {type: Number, min: 0},
-    planetaOrigin: {type: String, default: 'Desconocido'},
+    planetaOrigen: {type: String, default: 'Desconocido'},
     debilidad: String,
     poderes: [String],
     aliados: [String],
@@ -22,3 +22,12 @@ const superheroSchema = new mongoose.Schema({
 //Implementación del esquema en un modelo
 const SuperHero = mongoose.model('SuperHero', superheroSchema);
 //El modelo permite realizar operaciones sobre los datos
+
+/*const insertSuperHero = ()=>{
+    const hero = new SuperHero({
+        nombreSuperHeroe: 'Spiderman',
+        nombreReal: 'Peter Parker',
+        edad: 25,
+        planetaOrigen
+    })
+} */
