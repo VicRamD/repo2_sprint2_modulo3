@@ -40,3 +40,31 @@ const insertSuperHero = async ()=>{
 } 
 
 insertSuperHero();
+
+//Función que actualiza superheroe por nombre
+const updateSuperHero = async (nombreSuperHeroe)=>{
+    const result = await SuperHero.updateOne(
+        {nombreSuperHeroe: nombreSuperHeroe},
+        {$set: {edad: 26}}
+    ); //actualiza la edad a 26
+    console.log("Resultado de la actualización: ", result);
+}
+
+//updateSuperHero('Spiderman');
+
+//Función que elimina superheroe de la colección por nombre
+const deleteSuperHero = async (nombreSuperHeroe)=>{
+    const result = await SuperHero.deleteOne({nombreSuperHeroe: nombreSuperHeroe});
+    console.log("Supehéroe eliminado: ", result);
+}
+
+//deleteSuperHero('Spiderman');
+
+/*Función para buscar todos los superhéroes cuyo planeta de origen
+sea la "Tierra" */
+const findSuperHeroes = async () => {
+    const heroes = await SuperHero.find({planetaOrigen: 'Tierra'});
+    console.log('Superhéroes encontrados: ', heroes);
+}
+
+findSuperHeroes();
